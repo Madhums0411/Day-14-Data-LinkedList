@@ -54,6 +54,22 @@ namespace DataStructureProblem
             }
             Console.WriteLine($"Added {value} at start of the linkedlist");
         }
+        public bool Search(int value)
+        {
+            //Temp variable is head now
+            Node temp = Head;
+            //Check until temp location will null
+            while (temp != null)
+            {
+                //If temp node data is equal to value to be searched
+                if (temp.data == value)
+                {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
+        }
         public void InsertNode(int value, int Previousvalue)
         {
             Node newNode = new Node(value);
