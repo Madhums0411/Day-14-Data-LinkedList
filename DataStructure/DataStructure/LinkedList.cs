@@ -161,6 +161,23 @@ namespace DataStructureProblem
             // Unlink the node from linked list
             prev.next = temp.next;
         }
+        public void sort()
+        {
+            Node i, j;
+            int temp;
+            for (i = this.Head; i.next != null; i = i.next)
+            {
+                for (j = i.next; j != null; j = j.next)
+                {
+                    if (i.data > j.data)
+                    {
+                        temp = i.data;
+                        i.data = j.data;
+                        j.data = temp;
+                    }
+                }
+            }
+        }
         internal void Display()
         {
             //temp variable will head
